@@ -5,6 +5,7 @@ warnings.filterwarnings('ignore')
 import datetime 
 from datetime import date
 
+# Importing the dataset
 def data_preparation():
 
     df = pd.read_csv('housingtarget.csv')
