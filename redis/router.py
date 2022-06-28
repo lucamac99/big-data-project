@@ -1,32 +1,36 @@
 from fastapi import APIRouter
-from schema import Task
+from schema import RealEstate
 
 router = APIRouter()
 
-@router.post("/task")
-async def create(task: Task):
-    return task.save()
+@router.post("/realestate")
+async def create(realestate: RealEstate):
+    return realestate.save()
 
-@router.get("/tasks")
+@router.get("/realestates")
 async def all():
-    return [format(pk) for pk in Task.all_pks()]
+    return [format(pk) for pk in RealEstate.all_pks()]
 
 def format(pk:str):
-    task = Task.get(pk)
+    realestate = RealEstate.get(pk)
     return {
-        "id":task.pk,
-        "name": task.name,
-        "description": task.description
+        "id": realestate.pk,
+        "title": realestate.title,
+        "textdata": realestate.textdata,
+        "desktophidden2": realestate.desktophidden2,
+        "desktophidden4": realestate.desktophidden4
     }
 
-@router.put("/task/{pk}")
-async def update(pk: str, task: Task):
-    _task = Task.get(pk)
-    _task.name = task.name
-    _task.description = task.description
-    return _task.save()
+@router.put("/realestate/{pk}")
+async def update(pk: str, realestate: RealEstate):
+    _realestate = RealEstate.get(pk)
+    _realestate.title = realestate.title
+    _realestate.textdata = realestate.textdata
+    _realestate.desktophidden2 = realestate.desktophidden2
+    _realestate.desktophidden4 = realestate.desktophidden4
+    return _realestate.save()
 
-@router.delete('/task/{pk}')
+@router.delete('/realestate/{pk}')
 async def delete(pk: str):
-    _task = Task.get(pk)
-    return _task.delete()
+    _realestate = RealEstate.get(pk)
+    return _realestate.delete()
