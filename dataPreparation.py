@@ -9,6 +9,8 @@ from datetime import date
 def data_preparation():
 
     df_rent = pd.read_csv('final.csv')
+    df_price = pd.read_csv('real_house_price.csv')
+    df_rent_price = pd.read_csv('rent_price.csv')
 
     # How to compose the final dataframe
     #df1 = pd.read_csv('housingtarget.csv')
@@ -18,4 +20,4 @@ def data_preparation():
     #result = pd.concat(frames)
     #result.to_csv('final.csv', sep='\t')
 
-    return df_rent
+    return df_rent, df_price, df_rent_price
