@@ -107,6 +107,7 @@ python3 dataVisualisation.py
 - [x] Script to retrieve data from Redis and converting JSON to CSV
 - [x] Implementing data cleaning and preparation scripts
 - [x] Implementing data visualization script
+- [ ] Diagram
 - [ ] Web App
 
 <p align="right">(<a href="#top">back to top</a>)</p>
