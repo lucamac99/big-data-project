@@ -37,6 +37,8 @@ pip install requirements.txt
 
 Da inserire il diagramma del sistema
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 <!-- USAGE  -->
 
 ## Starting the system
@@ -55,9 +57,14 @@ uvicorn main:app --reload
 ```
 
 At this point all the elements needed to have the system running are running.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ## Usage
 
 For the purposes of this project, the data were collected manually by web scraping and are already collected inside the *scraped.json* file. However, it is possible to implement a data stream processing system, since the Data Storage and Data Preparation scripts are already set up for this.
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 ### Importing data into the database
 
@@ -69,6 +76,8 @@ python3 import_to_redis.py
 
 This script imports all the Real Estates records obtained in the scraped.json file into the Redis database.
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ### Getting the data from the database
 
 Return to root. Then run the command to start the getData script, which performs a retrieve from the database and merges all the JSON records into a CSV file.
@@ -78,6 +87,8 @@ cd ..
 python3 getData.py
 ```
 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ### Data Preparation and Data Cleaning
 
 Two separate scripts perform data preparation and cleaning.
@@ -86,6 +97,9 @@ Two separate scripts perform data preparation and cleaning.
 python3 dataPreparation.py
 python3 dataCleaning.py
 ```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 ### Data Visualization
 
 The final script performs the generation of the various plots aimed at directing the operator in the choice of purchase.
@@ -93,6 +107,8 @@ The final script performs the generation of the various plots aimed at directing
 ```sh
 python3 dataVisualisation.py
 ```
+
+<p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- ROADMAP -->
 ## Roadmap
