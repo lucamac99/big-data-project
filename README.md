@@ -131,6 +131,7 @@ Don't forget to give the project a star! Thanks again!
 ## Contact
 
 Luca Maccacaro - luca.maccacaro@studenti.unitn.it
+
 Simone Bellavia – simone.bellavia@studenti.unitn.it
 
 Project Link: [https://github.com/lucamac99/big-data-project](https://github.com/lucamac99/big-data-project)
