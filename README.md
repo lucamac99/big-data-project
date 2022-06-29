@@ -9,7 +9,7 @@ The goal of the project is to implement a big data system to support a real esta
 
 The technologies used in the implementation of the project are listed below.
 
-* Plugin per Scraping di cui non ricordo il nome
+* [Instant Data Scraper](https://chrome.google.com/webstore/detail/instant-data-scraper/ofaokhiedipichpaobibbnahnkdoiiah/)
 * [Python](https://nextjs.org/)
 * [Docker](https://www.docker.com/)
 * [Redis](https://redis.io/)
