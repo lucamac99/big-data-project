@@ -10,6 +10,9 @@ def data_cleaning():
     df_house_price = df_house_price.fillna(0)
     df_rent_price = df_rent_price.fillna(0)
 
+    # renaming columns
+    df.rename(columns = {'textdata':'text-data', 'desktophidden2':'desktop-hidden 2', 'desktophidden4':'desktop-hidden 4',}, inplace = True)
+
     # create a new column with the country name by taking the last word of the column 'title'
     splitted = df['title'].str.split()
     df['country'] = splitted.str[-1]
