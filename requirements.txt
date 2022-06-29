@@ -1,0 +1,7 @@
+fastapi
+redis_om
+pandas
+matplotlib
+numpy
+geopandas
+shapely.geometry
