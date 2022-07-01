@@ -12,7 +12,8 @@ def data_preparation():
     df_price = pd.read_csv('real_house_price.csv')
     df_rent_price = pd.read_csv('rent_price.csv')
 
-    # How to compose the final dataframe
+    # How we did compose the final dataframe
+    
     #df1 = pd.read_csv('housingtarget.csv')
     #df2 = pd.read_csv('housingtarget (2).csv')
     #df3 = pd.read_csv('housingtarget (3).csv')

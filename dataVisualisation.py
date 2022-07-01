@@ -12,17 +12,14 @@ from dataCleaning import data_cleaning
 df, df_rent_price, df_house_price = data_cleaning()
 
 # first plots of the data
-df = df[df['index'].isna() == False]
-df.groupby(['country'])['index'].mean().plot(legend=True, kind='bar', figsize=(10,5), title='Average index by country', xlabel='Country', ylabel='Average index')
-df.groupby(['country'])['price'].mean().plot(legend=True, kind='bar', figsize=(10,5), title='Average price by country', xlabel='Country', ylabel='Average price')
-
-# rename the columns
-df_house_price.rename(columns={"Unnamed: 0": "country"}, inplace=True)
-df_rent_price.rename(columns={"Unnamed: 0": "country"}, inplace=True)
-
+""" df = df[df['index'].isna() == False]
+df.groupby(['country'])['index'].mean().plot(kind='bar', figsize=(10,5), title='Average index by country', xlabel='Country', ylabel='Average index')
+df.groupby(['country'])['price'].mean().plot(kind='bar', figsize=(10,5), title='Average price by country', xlabel='Country', ylabel='Average price')
+ """
 # bar plot of the rent_price index
 ax = plt.gca()
 df_rent_price.plot( x = 'country', y = '2020', ax = ax, figsize=(10,5), legend=True, kind='bar', title='Average rent price by country', xlabel='Country', ylabel='Average rent price')
+plt.show()
 
 # compare the rent_price and house_price indexes with a bar plot
 countries = df_rent_price['country']
@@ -148,30 +145,13 @@ print(df)
 
 PRICE_LENGTH = df["price"].values
 INDEX_LENGTH = df["index"].values
-SURFACE_LENGTH = df["surface"].values
 
-#COUNTRIES = df["country"].values
-#COUNTRIES_ = np.unique(COUNTRIES)
-
-COLORS = ["#1B9E77", "#D95F02", "#7570B3", "#E7298A", "#66A61E", "#E6AB02", "#1B9E77", "#D95F02", "#7570B3", "#E7298A", "#66A61E", "#E6AB02", "#1B9E77", "#D95F02", "#7570B3", "#E7298A", "#66A61E", "#E6AB02", "#1B9E77", "#D95F02", "#7570B3", "#E7298A", "#66A61E", "#E6AB02", "#1B9E77", "#D95F02", "#7570B3", "#E7298A", "#66A61E", "#E6AB02", "#1B9E77", "#D95F02", "#7570B3", "#E7298A", "#66A61E", "#E6AB02", "#1B9E77", "#D95F02", "#7570B3", "#E7298A", "#66A61E", "#E6AB02", "#1B9E77", "#D95F02", "#7570B3", "#E7298A", "#66A61E", "#E6AB02", "#1B9E77", "#D95F02", "#7570B3", "#E7298A", "#66A61E", "#E6AB02", "#1B9E77", "#D95F02", "#7570B3", "#E7298A", "#66A61E", "#E6AB02", "#1B9E77", "#D95F02", "#7570B3", "#E7298A", "#66A61E", "#E6AB02", "#1B9E77", "#D95F02", "#7570B3", "#E7298A", "#66A61E", "#E6AB02", "#1B9E77", "#D95F02", "#7570B3", "#E7298A", "#66A61E", "#E6AB02", "#1B9E77", "#D95F02", "#7570B3", "#E7298A", "#66A61E", "#E6AB02"]
-
-fig, ax = plt.subplots(figsize=(8,8))
-
-""" for i in range(len(COUNTRIES_)):
-    ax.scatter(
-        x = SURFACE_LENGTH[i],
-        y = PRICE_LENGTH[i], 
-        s = INDEX_LENGTH[i]*100, 
-        c = COLORS[i], 
-        label = COUNTRIES_[i], 
-        alpha = 0.6, 
-        edgecolors="white", 
-        linewidth=2); """
+COLORS = ["#1B9E77", "#D95F02", "#7570B3", "#E7298A", "#66A61E", "#E6AB02", "#F0F8FF", "#000000", "#7570B3", "#00FFFF", "#00E672", "#A7AB12", "#1AAE90", "#00FF00", "#0000AA", "#FFF000", "#66FF00", "#808080", "#B22222", "#903FEF", "#676767", "#FEA000", "#66A51E", "#EEFF00", "#DC143C", "#0065FF", "#8787FF"]
 
 fig, ax = plt.subplots(figsize=(8,8))
 for country, color in zip(COUNTRIES_, COLORS):
     idxs = np.where(COUNTRIES_ == country)
-    # No legend will be generated if we don't pass label=species
+    # No legend will be generated if we don't pass label=coutry
     ax.scatter(
         PRICE_LENGTH[idxs], INDEX_LENGTH[idxs], label=country,
         s=50, color=color, alpha=0.7,

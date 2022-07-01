@@ -5,6 +5,10 @@ def data_cleaning():
 
     df_rent, df_house_price, df_rent_price = data_preparation()
 
+    # rename the columns
+    df_house_price.rename(columns={"Unnamed: 0": "country"}, inplace=True)
+    df_rent_price.rename(columns={"Unnamed: 0": "country"}, inplace=True)
+
     # there are NaN, we replace them with 0
     df = df_rent.fillna(0)
     df_house_price = df_house_price.fillna(0)
