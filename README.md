@@ -15,6 +15,7 @@ The technologies used in the implementation of the project are listed below.
 * [Docker](https://www.docker.com/)
 * [Redis](https://redis.io/)
 * [FastAPI](https://fastapi.tiangolo.com/)
+* [Plotly Dash](https://plotly.com/dash/)
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -36,7 +37,7 @@ pip install requirements.txt
 
 ### Diagram
 
-Da inserire il diagramma del sistema
+<img width="566" alt="image" src="https://user-images.githubusercontent.com/52851988/176944338-157f8767-d0dc-4dc6-a0a9-169b0e7fe59d.png">
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -111,6 +112,10 @@ python3 dataVisualisation.py
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+### Front-End
+
+It is possible to start a web application that provides the Front-End side to our system via Plotly Dash. Just start the .py script to run the server, and consult the Front-End locally.
+
 <!-- ROADMAP -->
 ## Roadmap
 
@@ -124,8 +129,8 @@ python3 dataVisualisation.py
 - [x] Script to retrieve data from Redis and converting JSON to CSV
 - [x] Implementing data cleaning and preparation scripts
 - [x] Implementing data visualization script
-- [ ] Diagram
-- [ ] Web App
+- [x] Diagram
+- [x] Web App
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
