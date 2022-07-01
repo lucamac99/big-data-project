@@ -8,7 +8,7 @@ from datetime import date
 # Importing the dataset
 def data_preparation():
 
-    df_rent = pd.read_csv('final.csv')
+    df_rent = pd.read_csv('final2.csv')
     df_price = pd.read_csv('real_house_price.csv')
     df_rent_price = pd.read_csv('rent_price.csv')
 
