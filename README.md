@@ -116,6 +116,10 @@ python3 dataVisualisation.py
 
 It is possible to start a web application that provides the Front-End side to our system via Plotly Dash. Just start the .py script to run the server, and consult the Front-End locally.
 
+```sh
+python3 webApp.py
+```
+
 <!-- ROADMAP -->
 ## Roadmap
 
